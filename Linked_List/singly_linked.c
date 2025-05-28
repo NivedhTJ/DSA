@@ -9,6 +9,20 @@ typedef struct node
 
 Node *head = NULL;
 
+void insert_front()
+{
+    int item;
+    printf("Enter item : ");
+    scanf("%d", &item);
+
+    Node *newNode = (Node *)malloc(sizeof(Node));
+    newNode->data = item;
+    newNode->next = head;
+    head = newNode;
+
+    printf("%d is inserted at the front\n\n", item);
+}
+
 void insert_end()
 {
     int item;
@@ -34,6 +48,50 @@ void insert_end()
     }
 
     printf("%d is inserted at the end\n\n", item);
+}
+
+void delete_front()
+{
+    if (head == NULL)
+    {
+        printf("List Underflow\n\n");
+        return;
+    }
+
+    Node *temp = head;
+    head = head->next;
+    printf("%d is deleted from the front\n\n", temp->data);
+    free(temp);
+}
+
+void delete_end()
+{
+    if (head == NULL)
+    {
+        printf("List Underflow\n\n");
+        return;
+    }
+
+    if (head->next == NULL)
+    {
+        printf("%d is deleted from the end\n\n", head->data);
+        free(head);
+        head = NULL;
+        return;
+    }
+
+    Node *temp = head;
+    Node *prev = NULL;
+
+    while (temp->next != NULL)
+    {
+        prev = temp;
+        temp = temp->next;
+    }
+
+    prev->next = NULL;
+    printf("%d is deleted from the end\n\n", temp->data);
+    free(temp);
 }
 
 void delete_by_value()
@@ -100,27 +158,39 @@ int main()
 {
     int ch = 0;
 
-    while (ch != 4)
+    while (ch != 6)
     {
-        printf("1.Insert at End 2.Delete by Value 3.Display 4.Exit");
+        printf("1.Insert at Front 2.Insert at End 3.Delete at Front 4.Delete at End 5.Delete by Value 6.Display 7.Exit");
         printf("\nEnter choice : ");
         scanf("%d", &ch);
 
         switch (ch)
         {
         case 1:
-            insert_end();
+            insert_front();
             break;
 
         case 2:
-            delete_by_value();
+            insert_end();
             break;
 
         case 3:
-            display();
+            delete_front();
             break;
 
         case 4:
+            delete_end();
+            break;
+
+        case 5:
+            delete_by_value();
+            break;
+
+        case 6:
+            display();
+            break;
+
+        case 7:
             printf("Exiting\n");
             return 0;
 

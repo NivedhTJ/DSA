@@ -10,6 +10,7 @@ typedef struct node
 
 Node *head = NULL;
 
+//inserts element at the beginning of the list
 void insert_begin()
 {
     int item;
@@ -29,6 +30,7 @@ void insert_begin()
     printf("%d is inserted at the beginning\n\n", item);
 }
 
+//inserts element at the end of the list
 void insert_end()
 {
     int item;
@@ -57,6 +59,7 @@ void insert_end()
     printf("%d is inserted at the end\n\n", item);
 }
 
+//inserts element after a value in the list
 void insert_after_value()
 {
     if (head == NULL)
@@ -96,6 +99,7 @@ void insert_after_value()
     printf("%d inserted after %d\n\n", item, target);
 }
 
+//deletes the head(first element) of the list
 void delete_begin()
 {
     if (head == NULL)
@@ -114,6 +118,7 @@ void delete_begin()
     free(temp);
 }
 
+//deletes the last element of the list
 void delete_end()
 {
     if (head == NULL)
@@ -139,6 +144,7 @@ void delete_end()
     free(temp);
 }
 
+//deletes a specific value from a list
 void delete_by_value()
 {
     if (head == NULL)
@@ -183,6 +189,7 @@ void delete_by_value()
     printf("%d is deleted from the list\n\n", value);
 }
 
+//displays the entire lists
 void display()
 {
     if (head == NULL)
