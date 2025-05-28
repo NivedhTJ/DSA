@@ -9,6 +9,7 @@ typedef struct node
 
 Node *top = NULL;
 
+//element pushed(inserted) to top of the stack as per FIFO
 void push()
 {
     int item;
@@ -23,6 +24,7 @@ void push()
     printf("%d is inserted into the stack\n\n", item);
 }
 
+//elements popped(deleted)from the top of the stack as per FIFO
 void pop()
 {
     if (top == NULL)
@@ -38,6 +40,7 @@ void pop()
     }
 }
 
+//functions to display stack through traversal of linked list
 void display()
 {
     if (top == NULL)
@@ -56,6 +59,7 @@ void display()
     }
 }
 
+//displays the topmost element of stack
 void peek()
 {
     if (top == NULL)

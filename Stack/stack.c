@@ -2,6 +2,7 @@
 int pos = 0;
 int item;
 
+//adding items to the stack at the topmost position
 void push(int stack[], int size)
 {
     if (pos < size)
@@ -18,6 +19,7 @@ void push(int stack[], int size)
     }
 }
 
+//removing items from the stack at the topmost position
 void pop(int stack[])
 {
     if (pos != 0)
@@ -31,6 +33,7 @@ void pop(int stack[])
     }
 }
 
+//displaying the stack
 void display(int stack[])
 {
     if (pos != 0)
@@ -47,6 +50,7 @@ void display(int stack[])
     }
 }
 
+//prints the topmost element of stack
 void peek(int stack[])
 {
     if (pos != 0)
