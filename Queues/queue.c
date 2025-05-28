@@ -3,6 +3,7 @@
 int front = -1, rear = -1;
 int item;
 
+//adds an element to rear of queue
 void enqueue(int queue[], int size)
 {
     if (rear == size - 1)
@@ -21,6 +22,7 @@ void enqueue(int queue[], int size)
     }
 }
 
+//deletes the rear element from queue
 void dequeue(int queue[])
 {
     if (front == -1 || front > rear)
@@ -34,6 +36,7 @@ void dequeue(int queue[])
     }
 }
 
+//displays the entire queue
 void display(int queue[])
 {
     if (front == -1 || front > rear)
@@ -50,6 +53,7 @@ void display(int queue[])
     }
 }
 
+//returns the front element of the queue
 void peek(int queue[])
 {
     if (front == -1 || front > rear)

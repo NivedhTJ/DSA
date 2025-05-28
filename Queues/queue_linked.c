@@ -10,6 +10,7 @@ typedef struct node
 Node *front = NULL;
 Node *rear = NULL;
 
+//adds element to rear position after traversal through list
 void enqueue()
 {
     int item;
@@ -33,6 +34,7 @@ void enqueue()
     printf("%d is inserted into the queue\n\n", item);
 }
 
+//removes element from front position
 void dequeue()
 {
     if (front == NULL)
@@ -54,6 +56,7 @@ void dequeue()
     }
 }
 
+//displays the queue 
 void display()
 {
     if (front == NULL)
@@ -72,6 +75,7 @@ void display()
     }
 }
 
+//displays the front element of queue
 void peek()
 {
     if (front == NULL)
