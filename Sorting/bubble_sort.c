@@ -23,6 +23,7 @@ void main()
     {
         for (int j = 0; j < n - i - 1; j++)
         {
+            //Swapping of elements
             if (a[j] > a[j + 1])
             {
                 temp = a[j];

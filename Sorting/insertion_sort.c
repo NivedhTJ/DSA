@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+//insertion sort
 void insertionSort(int arr[], int n)
 {
     int i, key, j;
