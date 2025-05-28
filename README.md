@@ -5,11 +5,10 @@ This repository contains basic implementations of commonly used Data Structures 
 ## 📁 Contents
 
 - Arrays  
-- Linked Lists (Singly, Doubly, Circular)  
-- Stacks  
-- Queues (Linear, Circular, Priority)  
-- Trees (Binary Trees, BSTs)  
-- Sorting Algorithms (Bubble, Insertion, Selection, Merge, Quick)  
+- Linked Lists (Singly, Doubly)  
+- Stacks  (Array implementation , Linked List implementation)
+- Queues (Linear, Circular,Linked List implementation)  
+- Sorting Algorithms (Bubble, Insertion)  
 - Searching Algorithms (Linear, Binary)  
 
 
