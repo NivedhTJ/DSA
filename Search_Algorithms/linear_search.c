@@ -19,6 +19,7 @@ void main()
     //Linear Search
     for (i = 0; i < n; i++)
     {
+        //Array elements are traversed one by one till the key is found
         if (a[i] == key)
         {
             printf("Element found at position %d", i + 1);
